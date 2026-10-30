@@ -11,7 +11,7 @@ services:
     restart: unless-stopped
     environment:
       SEARXNG_URL: http://searxng:8080
-      WIFAQ_SEARCH_TOKEN: WIFAQ_SEARCH_TOKEN
+      WIFAQ_SEARCH_TOKEN: $${WIFAQ_SEARCH_TOKEN}
       MAX_RESULTS: "20"
       REQUEST_TIMEOUT_SECONDS: "10"
     ports: ["127.0.0.1:8080:8080"]
